@@ -1,0 +1,143 @@
+@import "./var.scss";
+
+.product__edit {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $K-w;
+
+  h2 {
+    margin-top: 5rem;
+    width: 100%;
+    padding: 0px 1rem;
+    @extend %tittle__h2;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 1rem;
+    row-gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .imagen__text {
+      display: flex;
+      width: 100%;
+      max-width: 300px;
+      flex-direction: column;
+      text-align: center;
+      row-gap: 0.5rem;
+
+      label {
+        font-size: 1.1rem;
+        color: $W-k;
+      }
+
+      span {
+        color: $W-k;
+        opacity: 0.7;
+        font-size: 0.9rem;
+      }
+
+      div {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        row-gap: 0.5rem;
+
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        button {
+            background-color: #e84747;
+            height: 2.7rem;
+            width: 3rem;
+            @extend %border__radius;
+            border: none;
+            outline: none;
+            margin: auto;
+            cursor: pointer;
+            @extend %transition;
+
+            img {
+                height: 1.5rem;
+            }
+        }
+
+        button:hover {
+            background-color: #b82e2e;
+        }
+      }
+    }
+
+    &-input {
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.1rem;
+
+      label {
+        color: $W-k;
+        font-size: 0.9rem;
+        opacity: 0.7;
+        text-transform: capitalize;
+      }
+
+      input {
+        @extend %input__forms;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      input:focus {
+        border-bottom-color: $W-g;
+      }
+
+      #label__img {
+        @extend %button__second;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        text-align: center;
+        max-width: none;
+      }
+
+      #label__img:hover {
+        border-color: $W-g-2;
+        color: $W-g-2;
+      }
+    }
+
+    .button__actualizar {
+      @extend %button;
+      max-width: 300px;
+      text-transform: capitalize;
+      font-size: 1.1rem;
+    }
+
+    .button__actualizar:hover {
+      background-color: $W-g-2;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .product__edit {
+    h2 {
+      padding: 0px 5rem;
+    }
+
+    &__form {
+      padding: 0px 5rem;
+    }
+  }
+}

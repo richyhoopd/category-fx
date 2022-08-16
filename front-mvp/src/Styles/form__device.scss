@@ -1,0 +1,74 @@
+@import "./var.scss";
+
+.form__device {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $K-w;
+
+  &__form {
+    @extend %form__content;
+    padding: 0px 1rem;
+    margin-top: 2rem;
+
+    input,
+    select,
+    textarea {
+      @extend %input__forms;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 4rem;
+    }
+
+    select {
+      padding-left: 7px;
+      border-right: 7px transparent solid;
+    }
+
+    button {
+      @extend %button__forms;
+    }
+
+    input:focus {
+      border-bottom-color: $W-g;
+    }
+
+    button:hover {
+      background-color: $W-g-2;
+    }
+
+    a {
+      @extend %button__second;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      max-width: 300px;
+    }
+
+    a:hover {
+      border-color: $W-g-2;
+      color: $W-g-2;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .form__device {
+    &__form {
+      padding: 0px 5rem;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .form__device {
+    &__form {
+      padding: 0px 12rem;
+      
+    }
+  }
+}

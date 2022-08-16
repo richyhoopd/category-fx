@@ -1,0 +1,86 @@
+@import "./var.scss";
+
+.user__list {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $K-w;
+
+  h2 {
+    padding: 0px 1rem;
+    @extend %tittle__h2;
+    margin-top: 5rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__table {
+    width: 100%;
+    overflow: auto;
+    padding: 0px 1rem;
+
+    table {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      thead {
+        th {
+          @extend %subtittle__p;
+          text-align: center;
+          padding-bottom: 1rem;
+          min-width: 100px;
+        }
+      }
+
+      tbody {
+        td {
+          padding: 0.5rem;
+          text-align: center;
+          color: $W-k;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        td:last-child {
+          display: flex;
+          justify-content: center;
+
+          button {
+            @extend %button;
+            height: 2rem;
+            font-size: 1.1rem;
+            width: max-content;
+            padding: 0px 1rem;
+          }
+
+          button:hover {
+            background-color: $W-g-2;
+          }
+
+          button:last-child {
+            background-color: #e84747;
+
+            img {
+              height: 1.2rem;
+              display: block;
+              margin: auto;
+            }
+          }
+
+          button:last-child:hover {
+            background-color: #b82e2e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .user__list {
+    &__table {
+      padding: 0px 5rem;
+    }
+  }
+}

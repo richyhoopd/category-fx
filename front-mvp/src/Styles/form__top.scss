@@ -1,0 +1,55 @@
+@import "./var.scss";
+
+.form__top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 0px 1rem;
+
+  &-progress {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: clamp(0.5rem, 2vw, 2rem);
+    width: 100%;
+    margin: 0.5rem 0px;
+
+    &-bar {
+      background-color: $W-w;
+      height: 0.5rem;
+      width: 2rem;
+      width: 100%;
+      @extend %border__radius;
+    }
+
+    #form__top-progress-bar-current {
+      background-color: rgba($color: $W-g, $alpha: 0.4);
+    }
+  }
+
+  h2 {
+    @extend %tittle__h2;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    @extend %subtittle__p;
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) {
+    .form__top {
+        padding: 0px 5rem;
+      }
+  }
+  
+  @media (min-width: 800px) {
+
+      .form__top {
+        padding: 0px 12rem;
+      }
+  
+  }

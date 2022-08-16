@@ -1,0 +1,225 @@
+@import "./var.scss";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  width: 100vw;
+  position: fixed;
+  z-index: 999;
+  border-bottom: 1.7px solid $W-w;
+  background-color: rgba($color: #ffffff, $alpha: 0.8);
+
+  #burger {
+    display: none;
+  }
+
+  #burger:checked ~ .nav__menu {
+    left: 0;
+  }
+
+  &__burger {
+    cursor: pointer;
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    img {
+      height: 2.1rem;
+      @extend %transition__fast;
+    }
+
+    img:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__logo {
+    height: 100%;
+    padding-top: 0.3rem;
+    img {
+      height: 2.2rem;
+    }
+  }
+
+  &__cart {
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    text-decoration: none;
+    @extend %transition__fast;
+
+    img {
+      height: 1.8rem;
+    }
+
+    span {
+      position: absolute;
+      background-color: $W-g;
+      height: 1rem;
+      width: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $K-w;
+      font-size: 0.7rem;
+      clip-path: circle();
+      top: -0.3rem;
+      right: -0.3rem;
+    }
+  }
+
+  &__cart:hover {
+    opacity: 0.7;
+  }
+  &__menu {
+    display: flex;
+    @extend %transition;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999999;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgba($color: $W-w, $alpha: 1);
+    border-bottom-right-radius: 0.4rem;
+    width: 20rem;
+    padding: 1rem 2rem;
+    top: 0;
+    left: -20rem;
+    max-height: 100vh;
+    overflow-y: auto;
+
+    &__x {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      justify-content: flex-end;
+      top: 0.7rem;
+      right: 0.7rem;
+
+      img {
+        height: 1.7rem;
+        cursor: pointer;
+        @extend %transition__fast;
+      }
+
+      img:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__user {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid $W-w;
+
+      img {
+        height: 3.4rem;
+        clip-path: circle();
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &__avatar {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          @extend %link;
+          font-size: 1rem;
+        }
+
+        p {
+          @extend %subtittle__p;
+        }
+      }
+    }
+
+    &__options {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 1rem;
+
+      #Escribenos__nav {
+        color: $W-g;
+        font-size: 1.2rem;
+
+        img {
+          height: 1.6rem;
+        }
+      }
+
+      &__option {
+        @extend %transition__fast;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1rem;
+        text-decoration: none;
+        padding: 0px 1rem;
+        @extend%subtittle__p;
+        height: 4rem;
+
+        img {
+          height: 1.4rem;
+          object-position: center;
+          opacity: 0.6;
+        }
+      }
+
+      &__option:last-child {
+        color: #b82e2e;
+      }
+
+      &__option:hover {
+        background-color: $W-w;
+      }
+    }
+  }
+
+  .admin__el__cacas {
+    @extend %subtittle__p;
+    margin: 1rem 0px;
+    width: 100%;
+  }
+
+  #usuarios__admin {
+    color: $W-k;
+  }
+
+  #nav__registrarse {
+    color: $W-g;
+  }
+}
+
+@media (min-width: 600px) {
+  .nav {
+    padding: 0.7rem 5rem;
+
+    &__cart {
+      img {
+        height: 1.5rem;
+      }
+    }
+
+    &__burger {
+      img {
+        height: 1.7rem;
+      }
+    }
+  }
+}

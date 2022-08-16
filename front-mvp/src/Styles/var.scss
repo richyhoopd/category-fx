@@ -1,0 +1,285 @@
+//Font
+$font: "Outfit", helvetica;
+
+
+//Colors
+
+//Black
+$K-w: #ffffff;
+$K-g: #28d4a3;
+$K-g-2: #0f9971;
+$K-k: #2c3b36;
+
+//White
+$W-w-2: #F5FAF9;
+$W-w: #F2F7F6;
+$W-g: #14cc98;
+$W-g-2: #007a57;
+$W-k: #232a28;
+
+$font-color-k: $W-k;
+$font-color-w: $K-w;
+
+//Components
+
+.dot {
+  color: $W-g;
+}
+
+
+
+%button__forms {
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: $W-g;
+  border: none;
+  outline: none;
+  color: $K-w;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+%button__big {
+  display: block;
+  height: 3.2rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: $W-g;
+  border: none;
+  outline: none;
+  color: $W-w;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+%button {
+  display: block;
+  height: 2.7rem;
+  width: 100%;
+  max-width: 250px;
+  background-color: $W-g;
+  border: none;
+  outline: none;
+  color: $W-w;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+%button__second {
+  display: block;
+  height: 2.7rem;
+  width: 100%;
+  max-width: 250px;
+  background-color: transparent;
+  border: 2px solid $W-g;
+  outline: none;
+  color: $W-g;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -ms-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+%button__big__second {
+  display: block;
+  height: 3.2rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: transparent;
+  border: 3px solid $W-g;
+  outline: none;
+  color: $W-g;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -ms-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+%input__forms {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 2.5rem;
+  border: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  background-color: $W-w;
+  font-size: 1.1rem;
+  outline: none;
+  padding: 0px 10px;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  color: $W-k;
+  transition: border 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  -moz-transition: border 0.3s ease-in-out;
+  -ms-transition: border 0.3s ease-in-out;
+  -o-transition: border 0.3s ease-in-out;
+}
+
+%link {
+  font-size: 1.15rem;
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  color: $W-g;
+  text-decoration: none;
+}
+
+%link__mini {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  color: $W-g;
+}
+
+%form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+%form__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+
+%tittle__h1__phone__black {
+  color: $W-k;
+  font-size: 2.4rem;
+}
+
+%tittle__h1__desktop__black {
+  color: $W-k;
+  font-size: 3.5rem;
+}
+
+%tittle__h1__phone__white {
+  color: $K-w;
+  font-size: 2rem;
+}
+
+%tittle__h1__desktop__white {
+  color: $K-w;
+  font-size: 3.5rem;
+}
+
+%tittle__h2 {
+  color: $W-k;
+  font-size: 2rem;
+}
+
+%tittle__h2__mini {
+  color: $W-k;
+  font-size: 1.4rem;
+}
+
+%tittle__h4 {
+  color: $W-k;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+%subtittle__p {
+  color: $W-k;
+  font-size: 1.1rem;
+}
+
+%form__options {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  row-gap: 1rem;
+}
+
+%transition {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+%transition__fast {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+%border__radius {
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+#null {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#null:hover {
+  background-color: $K-w;
+}

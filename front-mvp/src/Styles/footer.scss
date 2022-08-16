@@ -1,0 +1,80 @@
+@import "./var.scss";
+
+.footer {
+  width: 100%;
+  padding: 3rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $K-w;
+  row-gap: 2rem;
+  border-top: 2px solid $W-w;
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    h2 {
+        @extend %tittle__h2;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        @extend %link;
+        margin: 0.3rem 0px;
+    }
+
+    a:hover {
+        color: $W-g-2;
+    }
+  }
+
+ &__bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 5rem;
+    grid-row-gap: 2rem;
+    width: 100%;
+
+    &__brand {
+        width: 100%;
+        p {
+            color: $W-k;
+            font-size: 0.9rem;
+            text-align: justify;
+
+            a {
+                color: $W-g;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        img {
+            height: 1.5rem;
+            opacity: 0.8;
+            @extend %transition;
+        }
+
+        img:hover {
+            opacity: 0.6;
+        }
+    }
+ }
+}
+
+@media (min-width: 600px) {
+  .footer {
+    padding: 3rem 5rem 1rem 5rem;
+  }
+}

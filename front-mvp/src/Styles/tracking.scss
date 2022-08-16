@@ -1,0 +1,175 @@
+@import "./var.scss";
+
+.tracking {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $K-w;
+
+  .lolgrande {
+    margin-top: 5rem;
+    width: 100%;
+    padding: 0px 1rem;
+    @extend %tittle__h2;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .lol {
+    width: 100%;
+    padding: 0px 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: $W-k;
+    margin-bottom: 1rem;
+  }
+
+  .lolspan {
+    width: 100%;
+    padding: 0px 1rem;
+    text-align: center;
+    display: block;
+    font-size: 2.4rem;
+    color: $W-g;
+    font-weight: bold;
+  }
+
+  &__method {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    p {
+      font-size: 1.8rem;
+      color: $W-g;
+    }
+  }
+
+  .button__tracking {
+    padding: 0px 1rem;
+    margin-bottom: 3rem;
+    
+    button {
+      @extend %button__second;
+      max-width: max-content;
+      padding: 0.5rem 1rem;
+      height: max-content;
+    }
+
+    button:hover {
+      color: $W-g-2;
+      border-color: $W-g-2;
+    }
+  }
+
+  .add__text {
+    font-size: 1.1rem;
+    color: $W-k;
+    padding: 0px 1rem;
+    margin-bottom: 3rem;
+  }
+
+  #wait {
+    color: #b82e2e;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 1rem;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+    
+    &-step:first-child {
+      margin-top: 2rem;
+    }
+     
+    &-step {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      column-gap: 0.4rem;
+      position: relative;
+      align-items: center;
+
+      &-text {
+        color: $W-k;
+      }
+
+      span:first-child {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgba($color: $W-g, $alpha: 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle();
+        font-weight: bold;
+        color: $W-g;
+      }
+
+      .step__ready {
+        background-color: $W-g !important;
+        color: $K-w !important;
+      }
+
+      .progress {
+        height: 2.5rem;
+        border-left: 0.2rem dashed rgba($color: $W-g, $alpha: 0.1);
+        position: absolute;
+        left: 0.9rem;
+        top: 2.5rem;
+      }
+
+      .progress__ready {
+        border-left: 0.2rem dashed $W-g;
+      }
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2vw;
+    width: 100%;
+    padding: 0px 1rem;
+    margin-bottom: 2rem;
+
+    button {
+      @extend %button__second;
+      font-size: 1rem;
+    }
+
+    button:first-child {
+        margin-left: auto;
+    }
+
+    button:hover {
+      color: $W-g-2;
+      border-color: $W-g-2;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .tracking {
+    .lolgrande,
+    .lol,
+    .lolspan,
+    &__steps,
+    &__buttons,
+    &__address {
+      padding: 0px 5rem;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .tracking {
+    .lolgrande,
+    .lol,
+    .lolspan,
+    &__steps,
+    &__buttons {
+      padding: 0px 12rem;
+    }
+  }
+}
